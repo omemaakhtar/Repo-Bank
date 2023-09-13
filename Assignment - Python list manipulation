@@ -1,0 +1,630 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMWwOQ9Bn2LJ/DHub6qNyTx",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/omemaakhtar/Repo-Bank/blob/main/Assignment%20-%20Python%20list%20manipulation\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Assignement # 3 Python List Manipulation\n",
+        "\n",
+        "Basic Operations List\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "r0DP8b0LZuVL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# create a list name\" fruits\" containing the following items \"Apple\", \"Banana\", \"Organe\", \"grapes\", \"Kiwi\"\n",
+        "fruits = [\"apple\", \"banana\", \"orange\", \"grapes\", \"Kiwi\"]\n",
+        "fruits"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "G-6mxggRYI7q",
+        "outputId": "4e6b1b09-0495-4996-c98a-b9feb755abe1"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['apple', 'banana', 'orange', 'grapes', 'Kiwi']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# add \"pear\" at the end of the list\n",
+        "fruits.append(\"pear\")\n",
+        "fruits"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Z38tNei4Y2xQ",
+        "outputId": "817b5f85-283e-4455-ba0a-0a6238ae2f4a"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['apple', 'banana', 'orange', 'grapes', 'Kiwi', 'pear']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Add \"mango\" at the second position\n",
+        "fruits.insert(1,\"mango\")\n",
+        "fruits"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oVIKjWgjZFQi",
+        "outputId": "8701ef0c-bdea-4dee-fedd-73b00ae3dc66"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['apple', 'mango', 'banana', 'orange', 'grapes', 'Kiwi', 'pear']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# remove \"orange\" from the list\n",
+        "fruits.remove(\"orange\")\n",
+        "fruits"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KUZlBj8oZYHE",
+        "outputId": "777ea0e8-5529-4b21-9b0e-fdd09cc489ed"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['apple', 'mango', 'banana', 'grapes', 'Kiwi', 'pear']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Slicing and Indexing\n"
+      ],
+      "metadata": {
+        "id": "xiosteXZZjDc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# create a list \"numbers\" containing integ from 0 to 9\n",
+        "numbers = [x for x in range (0,10)]\n",
+        "print(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uVGMghNrZqgy",
+        "outputId": "d2e1404e-a20e-4e28-f004-1a4cc8ffbb09"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#print one element \"3\"\n",
+        "print(numbers[3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8V9wR2zSaJo5",
+        "outputId": "933b05ad-61e4-4069-c1dc-6d60adc1b6ec"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# print a sublist having the elements from index 2 to 6\n",
+        "print(numbers[2:7])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WoloMSeWab-1",
+        "outputId": "27bd914c-a23f-4d01-91ac-6379cf8f1b00"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#print last three elemenrs using negative indexing\n",
+        "print(numbers[-3:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nywXHbP-auxf",
+        "outputId": "d815728a-974b-4164-c888-10b8f3ca21ec"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[7, 8, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "List Comprehension"
+      ],
+      "metadata": {
+        "id": "1KhMrDedbHkO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# create a list named \"squares\" using a list comprehension that contains the squares of number from 1 to 10\n",
+        "squares = [x ** 2 for x in range (1, 11)]\n",
+        "print (squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_xVGRqC7bJbm",
+        "outputId": "9d7b6e16-8303-4e7c-dda2-dc6f21472ebb"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# create a list named even_squares using a list comprehension that contains the squares of even numbers from the 'squares' list.\n",
+        "even_squares = [ x for x in squares if x % 2 == 0]\n",
+        "print(even_squares)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Xw2gAFz6b1j8",
+        "outputId": "176c38e5-9b11-4c1e-a93a-85aa2498827e"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[4, 16, 36, 64, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "List manipulation"
+      ],
+      "metadata": {
+        "id": "xoehKhTNC48f"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# create a list name 'colors' containing following items: \"red\", \"green\", \"blue\", \"yellow\", \"purple\".\n",
+        "colors = (\"red\", \"green\", \"blue\", \"yellow\", \"purple\")\n",
+        "print(colors)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XkI7sP-OC_Fd",
+        "outputId": "0ec7494f-f465-436b-f2cc-05dd34a43035"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "('red', 'green', 'blue', 'yellow', 'purple')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# swap first and last name in the list.\n",
+        "colors = [\"red\", \"green\", \"blue\", \"yellow\", \"purple\"]\n",
+        "temp = colors[0]\n",
+        "colors[0] = colors [-1]\n",
+        "colors[-1] = temp\n",
+        "colors"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AWHjCtj1EQOh",
+        "outputId": "afde92fc-9ce6-425e-bd21-a80cd5eda020"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['purple', 'green', 'blue', 'yellow', 'red']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# reverse the order of the list\n",
+        "colors = [\"red\", \"green\", \"blue\", \"yellow\", \"purple\"]\n",
+        "colors.reverse()\n",
+        "colors"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K1KEDFOhFuT2",
+        "outputId": "60c81d82-3b3b-470d-a410-0d735fdafc27"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['purple', 'yellow', 'blue', 'green', 'red']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Remove the second and third element of the list\n",
+        "colors = [\"red\", \"green\", \"blue\", \"yellow\", \"purple\"]\n",
+        "del colors[1:3]\n",
+        "print(colors)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MIQQvRWrF-mk",
+        "outputId": "ee51498d-89af-49b4-f2c5-ba57f55bb20a"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['red', 'yellow', 'purple']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Advance Slicing\n"
+      ],
+      "metadata": {
+        "id": "28D9D-T6GcPL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# create a list named 'letters' containing letters from 'a' to 'j'\n",
+        "\n",
+        "letters = [chr(x) for x in range (97, 107)]\n",
+        "letters"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aZ3d91BWGg9q",
+        "outputId": "ebc13f17-5bd7-464a-abcf-1e28d9c63c6b"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# using slicing, create a new list 'first_half' containing the first half of the 'letters' list\n",
+        "first_half = letters[:len(letters)//2]\n",
+        "first_half\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ygzpdGiSHDo5",
+        "outputId": "e59a30f6-532f-414f-88f0-c318c686c911"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['a', 'b', 'c', 'd', 'e']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# using slicing, create a new list'last_three' containing last three elements in 'letters' list.\n",
+        "last_three = letters[7::]\n",
+        "last_three"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M9hJBtt_0TWE",
+        "outputId": "e7614273-592b-4a6a-bcff-74e8e6bab6ec"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['h', 'i', 'j']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Nested List"
+      ],
+      "metadata": {
+        "id": "_GKO3wtp1C3M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\"\"\"\n",
+        "a)  create nested list named 'matrix' with the following rows:\n",
+        "    - [1,2,3]\n",
+        "    - [4,5,6]\n",
+        "    - [7,8,9]\n",
+        "\"\"\"\n",
+        "matrix = [[1,2,3], [4,5,6], [7,8,9]]\n",
+        "for i in matrix :\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eMoIskLg1Igp",
+        "outputId": "4b90f7dc-1f80-4370-cc74-8f7ab5669677"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n",
+            "[4, 5, 6]\n",
+            "[7, 8, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# print the element in the second row in the third column\n",
+        "print (matrix[1][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9DPGMz8D2L12",
+        "outputId": "7648b437-dc4c-4403-94f5-b968ec0472fc"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " # use nested indexing to change the value in the second row and first column to 0\n",
+        " matrix[1][0] = 0\n",
+        " for i in matrix:\n",
+        "    print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SkYsr61O2v5I",
+        "outputId": "389f22fd-a4cc-4c1c-c48b-71afeb27616e"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n",
+            "[0, 5, 6]\n",
+            "[7, 8, 9]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
